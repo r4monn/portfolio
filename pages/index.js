@@ -45,6 +45,7 @@ const Home = () => {
       <div className="w-[1200px] h-full absolute right-0 bottom-0">
         {/* bg img*/}
         <div className="bg-none xl:bg-explosion2 xl:bg-cover xl:bg-right xl:bg-no-repeat w-9/12 h-full absolute -right-8 -bottom-1/3 bg-right-bottom mix-blend-exclusion opacity-30"></div>
+        <ParticleContainer />
         <motion.div 
           variants={fadeIn('up', 0.5)} 
           initial='hidden' 
