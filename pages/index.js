@@ -18,7 +18,7 @@ const Home = () => {
             exit='hidden' 
             className="h1"
           >
-            Transforming Ideas <br /> Into <span className="text-violet-500">Digital Reality</span>
+            Olá, eu sou o Ramon! <br /> <span className="text-violet-500">Software Developer</span>
           </motion.h1>
           <motion.p variants={fadeIn('down', 0.3)} 
             initial='hidden' 
@@ -26,7 +26,7 @@ const Home = () => {
             exit='hidden' 
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna risus, fringilla iaculis mauris at, pharetra convallis ex. Phasellus bibendum.
+          Provedor de soluções tecnológicas mais adequadas para você e sua empresa. Vamos trabalhar juntos e transformar suas ideias em realidade?
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
