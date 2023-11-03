@@ -9,12 +9,10 @@ const raleway = Raleway({
 
 import Nav from '../components/Nav'
 import Header from '../components/Header'
-import TopLeftImg from '../components/TopLeftImg'
 
 const Layout = ({children}) => {
   return (
     <div className={`page bg-site2 text-white bg-cover bg-no-repeat ${raleway.variable} font-raleway relative`}>
-      <TopLeftImg />
       <Nav />
       <Header />
       {children}
