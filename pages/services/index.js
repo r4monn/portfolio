@@ -11,8 +11,8 @@ const Services = () => {
         <div className="flex flex-col xl:flex-row gap-x-8">
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
             <motion.h2
-              variants={fadeIn("up", 0.3)}
-              inital="hidden"
+              variants={fadeIn("up", 0.4)}
+              initial="hidden"
               animate="show"
               exit="hidden"
               className="h2 xl:mt-8"
@@ -21,7 +21,7 @@ const Services = () => {
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
-              inital="hidden"
+              initial="hidden"
               animate="show"
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
@@ -31,7 +31,7 @@ const Services = () => {
           </div>
           <motion.div
             variants={fadeIn("down", 0.6)}
-            inital="hidden"
+            initial="hidden"
             animate="show"
             exit="hidden"
             className="w-full xl:max-w-[60%]"
