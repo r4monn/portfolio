@@ -5,7 +5,8 @@ import ProjectsBtn from '../components/ProjectsBtn';
 import Avatar from '../components/Avatar';
 
 import { motion } from 'framer-motion';
-import { fadeIn } from '../variants'
+import { fadeIn } from '../variants';
+import Typewriter from "typewriter-effect";
 
 const Home = () => {
   return (
@@ -18,7 +19,17 @@ const Home = () => {
             exit='hidden' 
             className="h1"
           >
-            Olá, eu sou o Ramon! <br /> <span className="text-violet-500">Software Developer</span>
+            Olá, eu sou o Ramon! <br /> <span className="text-violet-500">
+              <Typewriter 
+                options={{
+                strings: ['Sofware Developer', 'Web Developer', 'UX/UI Designer'],
+                autoStart: true,
+                loop: true,
+                delay: 50,
+                deleteSpeed: 40
+                }}
+              />
+            </span>
           </motion.h1>
           <motion.p variants={fadeIn('down', 0.3)} 
             initial='hidden' 
@@ -52,7 +63,7 @@ const Home = () => {
           animate='show' 
           exit='hidden' 
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className="hidden w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-44 lg:right-[4%]"
+          className="w-full h-full max-w-[500px] max-h-[632px] absolute -bottom-32 lg:right-[14%]"
         >
           <Avatar />
         </motion.div>
