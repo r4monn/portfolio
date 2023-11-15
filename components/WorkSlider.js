@@ -4,40 +4,48 @@ const workSlides = {
     {
       images: [
         {
-          title: "title",
+          title: "Coffee Delivery",
           path: "/thumb1.jpg",
+          preview: "https://coffee-delivery-r4monn.vercel.app/",
         },
         {
-          title: "title",
+          title: "To-Do List",
           path: "/thumb2.jpg",
+          preview: "https://todo-list-r4monn.vercel.app/",
         },
         {
-          title: "title",
+          title: "Ignite Timer",
           path: "/thumb3.jpg",
+          preview: "https://ignite-timer-wheat.vercel.app/",
         },
         {
-          title: "title",
+          title: "Biko Corp.",
           path: "/thumb4.jpg",
+          preview: "https://biko-corp.vercel.app/",
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
+          title: "Biko Corp.",
           path: "/thumb4.jpg",
+          preview: "https://biko-corp.vercel.app/",
         },
         {
-          title: "title",
+          title: "Coffee Delivery",
           path: "/thumb1.jpg",
+          preview: "https://coffee-delivery-r4monn.vercel.app/",
         },
         {
-          title: "title",
+          title: "To-Do List",
           path: "/thumb2.jpg",
+          preview: "https://todo-list-r4monn.vercel.app/",
         },
         {
-          title: "title",
+          title: "Ignite Timer",
           path: "/thumb3.jpg",
+          preview: "https://ignite-timer-wheat.vercel.app/",
         },
       ],
     },
@@ -70,7 +78,7 @@ const WorkSlider = () => {
               {slide.images.map((image, index) => {
                 return (
                   <div className="relative rounded-md overflow-hidden flex items-center justify-center group" key={index}>
-                    <div className="flex items-center justify-center relative overflow-hidden group">
+                    <a href={image.preview} target="_blank" className="flex items-center justify-center relative overflow-hidden group">
                       <Image src={image.path} width={500} height={300} alt="" />
 
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
@@ -85,7 +93,7 @@ const WorkSlider = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 );
               })}

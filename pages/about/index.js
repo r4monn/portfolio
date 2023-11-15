@@ -143,11 +143,11 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/90"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/100"
                 >
-                  <div className="font-normal mb-2 md:mb-0">{item.title}</div>
+                  <div className="font-medium mb-2 md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">-</div>
-                  <div className="font-light">{item.stage}</div>
+                  <div className="font-light text-white/50">{item.stage}</div>
                   <div className="flex gap-x-4 gap-y-4 flex-wrap">
                     {item.icons?.map((icon, itemIndex) => {
                       return (
