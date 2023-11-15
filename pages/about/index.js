@@ -10,32 +10,32 @@ const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <Icon icon="devicon:html5" />,
-          <Icon icon="devicon:css3" />,
-          <Icon icon="logos:javascript" />,
-          <Icon icon="devicon:typescript" />,
-          <Icon icon="logos:react" />,
-          <Icon icon="devicon:nextjs-wordmark" />,
-          <Icon icon="devicon:vitejs" />,
-          <Icon icon="devicon:tailwindcss" />,
-          <Icon icon="devicon:bootstrap" />,
-          <Icon icon="devicon:framermotion" />,
+          <Icon key="1"icon="devicon:html5" />,
+          <Icon key="2"icon="devicon:css3" />,
+          <Icon key="3"icon="logos:javascript" />,
+          <Icon key="4"icon="devicon:typescript" />,
+          <Icon key="5"icon="logos:react" />,
+          <Icon key="6"icon="devicon:nextjs-wordmark" />,
+          <Icon key="7"icon="devicon:vitejs" />,
+          <Icon key="8"icon="devicon:tailwindcss" />,
+          <Icon key="9"icon="devicon:bootstrap" />,
+          <Icon key="10"icon="devicon:framermotion" />,
         ],
       },
       {
         title: "Back-End",
         icons: [
-          <Icon icon="devicon:java" />,
-          <Icon icon="devicon:spring" />,
-          <Icon icon="devicon:python" />,
-          <Icon icon="devicon:kotlin" />,
-          <Icon icon="devicon:sqldeveloper" />,
-          <Icon icon="devicon:prisma" />,
+          <Icon key="1" icon="devicon:java" />,
+          <Icon key="2" icon="devicon:spring" />,
+          <Icon key="3" icon="devicon:python" />,
+          <Icon key="4" icon="devicon:kotlin" />,
+          <Icon key="5" icon="devicon:sqldeveloper" />,
+          <Icon key="6" icon="devicon:prisma" />,
         ],
       },
       {
         title: "Others",
-        icons: [<Icon icon="devicon:git" />, <Icon icon="devicon:figma" />],
+        icons: [<Icon key="1" icon="devicon:git" />, <Icon key="2" icon="devicon:figma" />],
       },
     ],
   },
@@ -98,12 +98,21 @@ const About = () => {
     <div className="h-full bg-primary/60 xl:bg-primary/30 py-32 text-center xl:text-left">
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <div className="flex-1 flex flex-col justify-center">
+        <motion.h2
+              variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
+              className="text-2xl lg:h2"
+            >
+              Sobre mim <span className="text-violet-500">.</span>
+            </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx:auto xl:mx-0 mt-4 xl:mt-8 mb-6 xl:mb-12 px-4 xl:px-0"
+            className="text-sm lg:text-lg max-w-[500px] mx:auto xl:mx-0 mt-4 xl:mt-8 mb-6 xl:mb-12 px-4 xl:px-0"
           >
             Natural do Rio de Janeiro, apaixonado por jogos, programação e
             música. Esdudante de programação à 2 anos. Comecei estudando
