@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>Portfolio | R4mon Dias</title>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="./favicon.ico" sizes="any" />
       </Head>
       <div
         className={`page bg-site2 text-white bg-cover bg-no-repeat ${raleway.variable} font-raleway relative`}

@@ -27,12 +27,12 @@ module.exports = {
         accent: '#F13024',
       },
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
-        explosion2: 'url("/bg-explosion2.jpg")',
-        circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
-        site2: 'url("/bg-site2.jpg")',
+        explosion: 'url("./bg-explosion.png")',
+        explosion2: 'url("./bg-explosion2.jpg")',
+        circles: 'url("./bg-circles.png")',
+        circleStar: 'url("./circle-star.svg")',
+        site: 'url("./site-bg.svg")',
+        site2: 'url("./bg-site2.jpg")',
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',

@@ -5,22 +5,22 @@ const workSlides = {
       images: [
         {
           title: "Coffee Delivery",
-          path: "/thumb1.jpg",
+          path: "./thumb1.jpg",
           preview: "https://coffee-delivery-r4monn.vercel.app/",
         },
         {
           title: "To-Do List",
-          path: "/thumb2.jpg",
+          path: "./thumb2.jpg",
           preview: "https://todo-list-r4monn.vercel.app/",
         },
         {
           title: "Ignite Timer",
-          path: "/thumb3.jpg",
+          path: "./thumb3.jpg",
           preview: "https://ignite-timer-wheat.vercel.app/",
         },
         {
           title: "Biko Corp.",
-          path: "/thumb4.jpg",
+          path: "./thumb4.jpg",
           preview: "https://biko-corp.vercel.app/",
         },
       ],
@@ -29,22 +29,22 @@ const workSlides = {
       images: [
         {
           title: "Biko Corp.",
-          path: "/thumb4.jpg",
+          path: "./thumb4.jpg",
           preview: "https://biko-corp.vercel.app/",
         },
         {
           title: "Coffee Delivery",
-          path: "/thumb1.jpg",
+          path: "./thumb1.jpg",
           preview: "https://coffee-delivery-r4monn.vercel.app/",
         },
         {
           title: "To-Do List",
-          path: "/thumb2.jpg",
+          path: "./thumb2.jpg",
           preview: "https://todo-list-r4monn.vercel.app/",
         },
         {
           title: "Ignite Timer",
-          path: "/thumb3.jpg",
+          path: "./thumb3.jpg",
           preview: "https://ignite-timer-wheat.vercel.app/",
         },
       ],
@@ -79,7 +79,7 @@ const WorkSlider = () => {
                 return (
                   <div className="relative rounded-md overflow-hidden flex items-center justify-center group" key={index}>
                     <a href={image.preview} target="_blank" className="flex items-center justify-center relative overflow-hidden group">
-                      <Image src={image.path} width={500} height={300} alt="" />
+                      <Image src={`./${image.path}`} width={500} height={300} alt="" />
 
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
