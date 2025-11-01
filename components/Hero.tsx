@@ -50,7 +50,7 @@ export default function Hero() {
                 >
                     {/* Styled as a button but using an anchor tag for project navigation */}
                     <button
-                        className="relative w-full sm:w-auto min-h-11 px-6 sm:px-8 py-3 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium rounded-xl"
+                        className="relative w-full sm:w-auto min-h-11 px-6 sm:px-8 py-3 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium rounded-lg"
                     /* onClick={(e) => {
                       e.preventDefault();
                       const projectsSection = document.getElementById("projects");
@@ -67,7 +67,7 @@ export default function Hero() {
 
                     {/* Using the Button component from shadcn but with custom styling to match the explore button */}
                     <button
-                        className="relative w-full sm:w-auto min-h-11 px-6 sm:px-8 py-3 text-gray-700 bg-[#88CE02] rounded-xl hover:bg-[#bdff43] transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
+                        className="relative w-full sm:w-auto min-h-11 px-6 sm:px-8 py-3 text-gray-700 bg-[#88CE02] rounded-lg hover:bg-[#bdff43] transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
                     >
                         Entrar em Contato
                         <MessageSquare className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
