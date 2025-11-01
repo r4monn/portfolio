@@ -168,7 +168,29 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .krub {
+    font-family: "Krub", sans-serif;
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 25s linear infinite;
   }
 }
