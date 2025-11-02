@@ -173,6 +173,13 @@
     @apply bg-background text-foreground;
   }
 
+  p {
+    font-family: "Krub", sans-serif;
+    font-weight: bold;
+    color: var(--foreground);
+    opacity: 0.6;
+  }
+
   .krub {
     font-family: "Krub", sans-serif;
     font-style: normal;

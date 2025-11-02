@@ -24,7 +24,7 @@ export default function WhyHire() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-28">
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.5} glarePosition="all" glareBorderRadius="12px">
-          <div className="bg-secondary/40 dark:bg-background p-6 rounded-xl border text-center group not-dark:hover:bg-foreground hover:text-background transition-all">
+          <div className="bg-card p-6 rounded-xl border text-center group not-dark:hover:bg-foreground hover:text-background transition-all">
             <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center mx-auto mb-4 not-dark:group-hover:bg-background not-dark:group-hover:text-foreground">
               <BarChart className="w-8 h-8" />
             </div>
@@ -46,7 +46,7 @@ export default function WhyHire() {
         </Tilt>
 
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.5} glarePosition="all" glareBorderRadius="12px">
-          <div className="bg-secondary/40 dark:bg-background p-6 rounded-xl border text-center group hover:bg-foreground hover:text-background transition-all">
+          <div className="bg-secondary/40 dark:bg-card p-6 rounded-xl border text-center group hover:bg-foreground hover:text-background transition-all">
             <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center mx-auto mb-4 not-dark:group-hover:bg-background not-dark:group-hover:text-foreground">
               <Percent className="w-8 h-8" />
             </div>
@@ -67,7 +67,7 @@ export default function WhyHire() {
         </Tilt>
 
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.5} glarePosition="all" glareBorderRadius="12px">
-          <div className="bg-secondary/40 dark:bg-background p-6 rounded-xl border text-center group hover:bg-foreground hover:text-background transition-all">
+          <div className="bg-card p-6 rounded-xl border text-center group hover:bg-foreground hover:text-background transition-all">
             <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center mx-auto mb-4 not-dark:group-hover:bg-background not-dark:group-hover:text-foreground">
               <Rocket className="w-8 h-8" />
             </div>

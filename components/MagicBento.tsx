@@ -601,10 +601,6 @@ const MagicBento: React.FC<BentoProps> = ({
             opacity: 1;
           }
           
-          .card--border-glow:hover {
-            box-shadow: 0 4px 20px rgba(46, 24, 78, 0.4), 0 0 30px rgba(${glowColor}, 0.2);
-          }
-          
           .particle::before {
             content: '';
             position: absolute;

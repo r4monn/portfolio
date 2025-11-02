@@ -38,7 +38,7 @@ export default function Hero() {
                 />
 
                 <p
-                    className="krub font-bold text-foreground/65 mt-4 sm:mt-6 text-lg md:text-xl"
+                    className="mt-4 sm:mt-6 text-lg md:text-xl"
                 >
                     Provedor de soluções tecnológicas mais adequadas para você e sua
                     empresa. Vamos trabalhar juntos e transformar suas ideias em

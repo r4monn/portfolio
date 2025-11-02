@@ -56,19 +56,15 @@ export default function Header() {
                         <NavigationMenu className="text-foreground">
                             <NavigationMenuList className="mr-6">
                                 <NavigationMenuItem>
-                                    <Link href="/">
-                                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle())}>
-                                            Início
-                                        </NavigationMenuLink>
-                                    </Link>
+                                    <NavigationMenuLink href="/" className={cn(navigationMenuTriggerStyle())}>
+                                        Início
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <Link href="/about" onClick={async () => { await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('about') }}>
-                                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle())}>
-                                            Sobre
-                                        </NavigationMenuLink>
-                                    </Link>
+                                    <NavigationMenuLink href="/about" onClick={async () => { await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('about') }} className={cn(navigationMenuTriggerStyle())}>
+                                        Sobre
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
@@ -105,7 +101,7 @@ export default function Header() {
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <Button onClick={() => scrollToSection('contact')} className={cn("px-4 py-2 transition-color bg-[#88CE02] text-black rounded-md hover:bg-[#bdff43]")}>
+                                    <Button onClick={() => scrollToSection('contact')} className={cn("px-4 py-2 transition-color bg-[#88CE02]  text-black rounded-md hover:bg-[#bdff43]")}>
                                         Contate-me
                                     </Button>
                                 </NavigationMenuItem>
