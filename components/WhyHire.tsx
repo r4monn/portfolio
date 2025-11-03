@@ -1,8 +1,9 @@
 "use client"
-import { BarChart, Percent, Rocket } from 'lucide-react';
+import { ArrowRight, BarChart, Percent, Rocket } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 import CountUp from './CountUp';
 import MagicBento from './MagicBento';
+import Link from 'next/link';
 
 export default function WhyHire() {
   return (
@@ -28,7 +29,7 @@ export default function WhyHire() {
             <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center mx-auto mb-4 not-dark:group-hover:bg-background not-dark:group-hover:text-foreground">
               <BarChart className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl lg:text-3xl font-medium mb-3 dark:group-hover:text-foreground">
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-3 dark:group-hover:text-foreground">
               +
               <CountUp
                 from={0}
@@ -50,7 +51,7 @@ export default function WhyHire() {
             <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center mx-auto mb-4 not-dark:group-hover:bg-background not-dark:group-hover:text-foreground">
               <Percent className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl lg:text-3xl font-medium mb-3 dark:group-hover:text-foreground">
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-3 dark:group-hover:text-foreground">
               <CountUp
                 from={0}
                 to={98}
@@ -67,11 +68,11 @@ export default function WhyHire() {
         </Tilt>
 
         <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.5} glarePosition="all" glareBorderRadius="12px">
-          <div className="bg-card p-6 rounded-xl border text-center group hover:bg-foreground hover:text-background transition-all">
+          <div className="bg-card p-6 rounded-xl border text-center group not-dark:hover:bg-foreground hover:text-background transition-all">
             <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center mx-auto mb-4 not-dark:group-hover:bg-background not-dark:group-hover:text-foreground">
               <Rocket className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl lg:text-3xl font-medium mb-3 dark:group-hover:text-foreground">
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-3 dark:group-hover:text-foreground">
               +
               <CountUp
                 from={0}
@@ -115,6 +116,17 @@ export default function WhyHire() {
             spotlightRadius={200}
             particleCount={1200}
           />
+        </div>
+
+        <div className="text-center mt-8">
+          <Link
+            href="/development-process"
+            onClick={() => window.scrollTo(0, 0)}
+            className="inline-flex items-center px-6 py-3 bg-secondary text-foreground rounded-lg hover:bg-primary hover:text-background transition-all group"
+          >
+            Conheça meu processo de desenvolvimento
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

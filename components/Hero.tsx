@@ -18,7 +18,7 @@ export default function Hero() {
                 )}
             />
 
-            <div className="flex flex-col relative justify-self-center self-center text-center max-w-4xl">
+            <div className="flex flex-col relative justify-self-center self-center text-center max-w-4xl xl:mt-16">
                 <div className="text-5xl sm:text-5xl lg:text-6xl font-bold">
                     <span className="text-foreground/80">Olá, eu sou </span>
                     <div className="relative text-center inline px-1 mt-2 sm:mt-6">
