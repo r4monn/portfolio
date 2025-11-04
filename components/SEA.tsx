@@ -4,11 +4,12 @@ import { useIsMobile } from "@/hooks/useMobile";
 import { useScrollHijack } from "@/hooks/useScrollHijack";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function SEA() {
+    const [isInView, setIsInView] = useState(false);
     const applicationsRef = useRef<HTMLDivElement>(null);
-    const hijackSectionRef = useRef<HTMLDivElement>(null!);;
+    const hijackSectionRef = useRef<HTMLDivElement>(null!);
     const [hoveredapplication, setHoveredapplication] = useState<number | null>(null);
     const isMobile = useIsMobile();
 
@@ -17,12 +18,31 @@ export default function SEA() {
         applications.length
     );
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsInView(entry.isIntersecting);  // Ativa/desativa o scroll hijack com base na visibilidade
+            },
+            { threshold: 0.2 }
+        );
+
+        if (hijackSectionRef.current) {
+            observer.observe(hijackSectionRef.current);
+        }
+
+        return () => {
+            if (hijackSectionRef.current) {
+                observer.unobserve(hijackSectionRef.current);
+            }
+        };
+    }, []);
+
     return (
         <section
             id="applications"
             className="relative bg-background overflow-hidden w-full"
         >
-            <div className="w-full pb-20 px-8 sm:px-10 lg:px-16" ref={applicationsRef}>
+            <div className="w-full px-8 sm:px-10 lg:px-16" ref={applicationsRef}>
                 <div
                     className={`text-center mb-10 max-w-3xl mx-auto application-item transition-all duration-1000 opacity-100 translate-y-0`}
                 >
@@ -42,11 +62,11 @@ export default function SEA() {
                     ref={hijackSectionRef}
                     className={cn(
                         "relative transition-all duration-500",
-                        isHijacked
+                        isHijacked && isInView
                             ? "fixed inset-0 z-50 bg-black"
                             : "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
                     )}
-                    style={{ height: isHijacked ? "100vh" : "auto" }}
+                    style={{ height: isHijacked && isInView ? "100vh" : "auto" }}
                 >
                     {isHijacked && (
                         <div className="absolute top-4 right-4 z-10 text-white text-sm opacity-70">

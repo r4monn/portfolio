@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect, useState, useCallback, ReactElement } from 'react';
 import { gsap } from 'gsap';
 import { useTheme } from 'next-themes';
