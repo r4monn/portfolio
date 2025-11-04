@@ -83,3 +83,72 @@ export const applications = [
       image: "/assets/sumup-nedMerQvxWQ-unsplash.jpg",
     },
   ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Coffee Delivery",
+    brand: "Coffee E-commerce",
+    description: "Loja virtual de cafés de variados tipos, para os apaixonados de café consumirem sem sair do conforto da sua casa.",
+    tags: ["Typescript", "React", "axios", "Stripe", "zod", "Stitches"],
+    imageUrl: "/assets/thumb1.jpg",
+    isFeatured: true,
+    link: "coffee-delivery-r4monn.vercel.app",
+  },
+  {
+    id: 2,
+    title: "Sicoob Up",
+    brand: "Sicoob",
+    description: "A Comunidade Sicoob Up é um ecossistema de atividades entre cooperados, comunidade e negócios locais criada para conectar pessoas, promover o crescimento e gerar oportunidades através dos valores do cooperativismo.",
+    tags: ["Typescript", "React", "Tailwind CSS"],
+    imageUrl: "/assets/thumb6.png",
+    isFeatured: true,
+    link: "sicoob-up.vercel.app",
+  },
+  {
+    id: 3,
+    title: "Personal Portfolio (old version)",
+    brand: "r4monn",
+    description: "Porfolio pessoal.",
+    tags: ["Javascript", "Next.js", "Tailwind CSS", "Framer motion", "emailjs"],
+    imageUrl: "/assets/thumb7.png",
+    isFeatured: true,
+    link: "portfolio-r4monn.vercel.app",
+  },
+  {
+    id: 4,
+    title: "ToDo List",
+    brand: "Personal Project",
+    description: "Web App de ToDoList totalmente feito em ReactJS.",
+    tags: ["Typescript", "React", "uuid", "styled-components"],
+    imageUrl: "/assets/thumb2.jpg",
+    link: "todo-list-r4monn.vercel.app"
+  },
+  {
+    id: 5,
+    title: "Voe Fácil",
+    brand: "Voe Fácil - Companhia Aérea",
+    description: "Uma plataforma onde os usuários podem reservar vôos e agendar viagens nacionais.",
+    tags: ["Java", "Spring Boot", "React", "Javascript", "Stitches", "axios", "zod", "PostgreSQL"],
+    imageUrl: "/assets/thumb5.png",
+    link: ""
+  },
+  {
+    id: 6,
+    title: "Ignite Timer",
+    brand: "Personal Project",
+    description: "Temporizador minimalista inspirado na técnica de Pomodoro que permite que você tenha controle sobre a sua produtividade armazenando seus ciclos em mémoria.",
+    tags: ["Typescript", "React", "zod", "styled-components"],
+    imageUrl: "/assets/thumb3.jpg",
+    link: "ignite-timer-wheat.vercel.app"
+  },
+  {
+    id: 7,
+    title: "Biko - Clone",
+    brand: "Biko Corp.",
+    description: "Uma landing page clone do Biko Corp.",
+    tags: ["Typescript", "React", "Stitches", "styled-components"],
+    imageUrl: "/assets/thumb4.jpg",
+    link: ""
+  }
+];
