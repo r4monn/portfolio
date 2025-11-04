@@ -111,7 +111,7 @@ export default function WhyHire() {
             enableSpotlight={true}
             enableBorderGlow={true}
             enableTilt={true}
-            enableMagnetism={true}
+            enableMagnetism={false}
             clickEffect={true}
             spotlightRadius={200}
             particleCount={1200}
@@ -122,7 +122,7 @@ export default function WhyHire() {
           <Link
             href="/development-process"
             onClick={() => window.scrollTo(0, 0)}
-            className="inline-flex items-center px-6 py-3 bg-secondary text-foreground rounded-lg hover:bg-primary hover:text-background transition-all group"
+            className="inline-flex items-center px-6 py-3 bg-secondary font-normal text-foreground/90 rounded-lg hover:bg-primary hover:text-background transition-all group"
           >
             Conheça meu processo de desenvolvimento
             <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

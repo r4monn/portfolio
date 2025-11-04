@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState, useCallback, ReactElement } from 'react';
 import { gsap } from 'gsap';
 import { useTheme } from 'next-themes';
-import { Circle, Lamp } from 'lucide-react';
+import { BanknoteArrowUp, Handshake, Rocket, Sparkles, Wrench, Zap } from 'lucide-react';
 
 export interface BentoCardProps {
   color?: string;
@@ -10,6 +10,7 @@ export interface BentoCardProps {
   label?: string;
   textAutoHide?: boolean;
   disableAnimations?: boolean;
+  icon?: ReactElement;
 }
 
 export interface BentoProps {
@@ -33,28 +34,34 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData: BentoCardProps[] = [
   {
-    title: 'Modernização de Sistemas Legados',
-    description: 'Estratégias e soluções para refatoração, reestruturação e migração de sistemas desatualizados para plataformas modernas, seguras e fáceis de manter.',
+    icon: <Sparkles className='group-hover:text-primary'/>,
+    title: 'Presença Digital Marcante',
+    description: 'Design moderno e funcional que destaca sua marca e atrai clientes ideais.',
   },
   {
-    title: 'Infraestrutura e Soluções em Nuvem',
-    description: 'Estratégias e soluções para projetar e implementar sistemas na nuvem (AWS, Azure, GCP).',
+    icon: <BanknoteArrowUp className='group-hover:text-primary'/>,
+    title: 'Aumento de Vendas',
+    description: 'Websites e e-commerce otimizados que convertem visitantes em clientes pagantes.',
   },
   {
-    title: 'E-commerce e Plataformas Digitais',
-    description: 'Construo soluções centradas no utilizador que impulsionam a conversão, simplificam o processo de checkout e garantem uma experiência perfeita em todos os dispositivos, impactando diretamente a receita e a retenção de clientes.',
+    icon: <Zap className='group-hover:text-primary'/>,
+    title: 'Automação Inteligente',
+    description: 'Sistemas que automatizam processos, economizam tempo e reduzem custos operacionais.',
   },
   {
-    title: 'Otimização de Desempenho',
-    description: 'Software especializado que analisa o desempenho do sistema, fornece diagnósticos em tempo real e melhora a eficiência das aplicações para evitar tempo de inatividade e garantir a confiabilidade.',
+    icon: <Wrench className='group-hover:text-primary'/>,
+    title: 'Manutenção e Suporte Contínuos',
+    description: 'Não apenas entrego um projeto; ofereço suporte técnico ágil e manutenção preventiva para garantir que seu sistema opere com máxima performance e estabilidade, sempre que você precisar.',
   },
   {
-    title: 'Arquitetura Escalável',
-    description: 'Sistemas adaptáveis e resilientes projetados para responder à carga do utilizador e às condições dos dados, garantindo desempenho consistente e utilização ideal dos recursos.',
+    icon: <Rocket className='group-hover:text-primary'/>,
+    title: 'Vantagem Competitiva',
+    description: 'Tecnologia de ponta que posiciona seu negócio à frente da concorrência.',
   },
   {
-    title: 'Engenharia e Análise de Dados',
-    description: 'Pipelines e plataformas de dados escaláveis que processam grandes volumes de informações, geram insights acionáveis e apoiam a tomada de decisões baseadas em dados.',
+    icon: <Handshake className='group-hover:text-primary'/>,
+    title: 'Comunicação Clara e Transparência',
+    description: 'Você terá total visibilidade do projeto com reuniões de alinhamento e relatórios de progresso regulares.',
   }
 ];
 
@@ -682,7 +689,7 @@ const MagicBento: React.FC<BentoProps> = ({
               return (
                 <ParticleCard
                   key={index}
-                  className={baseClassName}
+                  className={`${baseClassName} group`}
                   style={cardStyle}
                   disableAnimations={shouldDisableAnimations}
                   particleCount={particleCount}
@@ -695,7 +702,8 @@ const MagicBento: React.FC<BentoProps> = ({
                     <span className="card__label text-base">{card.label}</span>
                   </div>
                   <div className="card__content flex flex-col relative text-foreground">
-                    <h3 className={`card__title font-normal text-lg m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
+                    {card.icon}
+                    <h3 className={`card__title font-normal text-lg m-0 mt-1.5 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                       {card.title}
                     </h3>
                     <p
