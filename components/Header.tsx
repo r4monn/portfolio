@@ -47,7 +47,7 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16">
                     <div className="shrink-0">
                         <Link href="/" className="flex items-center">
-                            <img src="/logo.svg" alt="Logo" className={cn("h-8 w-auto", theme === "light" ? "brightness-100 invert" : "brightness-0 invert")} />
+                            <img src="/logo.svg" alt="Logo" className={cn("h-8 w-auto dark:brightness-0 dark:invert brightness-100 invert")} />
                         </Link>
                     </div>
 
