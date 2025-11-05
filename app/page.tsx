@@ -1,16 +1,29 @@
+"use client"
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import SEA from "@/components/SEA";
 import WhyHire from "@/components/WhyHire";
-import Image from "next/image";
+import { useEffect } from "react";
+
+import Lenis from "lenis";
+import 'lenis/dist/lenis.css'
 
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf)
+  }, [])
+
   return (
-    <div className="">
-       <Hero />
-       <WhyHire />
-       <SEA />
-       <Projects />
-    </div>
+    <>
+      <Hero />
+      <WhyHire />
+      <SEA />
+      <Projects />
+    </>
   );
 }

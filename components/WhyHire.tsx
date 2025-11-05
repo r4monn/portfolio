@@ -4,23 +4,28 @@ import Tilt from 'react-parallax-tilt';
 import CountUp from './CountUp';
 import MagicBento from './MagicBento';
 import Link from 'next/link';
+import TextReveal from './TextReveal';
 
 export default function WhyHire() {
   return (
     <section id="why-hire" className="relative mx-auto py-16 md:py-24 bg-background overflow-hidden px-4 sm:px-6 lg:px-24 xl:px-64">
       <div className="text-center mt-10 mb-12 md:mb-16">
-        <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
-          <span>Por que me </span>
-          <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-2">
-            <div className="relative z-10 inline">Contratar</div>
-            <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-2 h-3"></div>
+        <TextReveal>
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
+            <span>Por que me </span>
+            <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-2">
+              <div className="relative z-10 inline">Contratar</div>
+              <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-2 h-3"></div>
+            </div>
+            <span>?</span>
           </div>
-          <span>?</span>
-        </div>
+        </TextReveal>
 
-        <p className="text-lg max-w-3xl mx-auto">
-          Em um mercado onde a tecnologia define o sucesso, trago experiência e inovação para transformar suas ideias em realidade digital
-        </p>
+        <TextReveal>
+          <p className="text-lg max-w-3xl mx-auto">
+            Em um mercado onde a tecnologia define o sucesso, trago experiência e inovação para transformar suas ideias em realidade digital
+          </p>
+        </TextReveal>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-28">
@@ -92,42 +97,50 @@ export default function WhyHire() {
 
       <div>
         <div className="text-center mb-8">
-          <div className="text-2xl md:text-3xl font-bold text-foreground/90 mb-3">
-            <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-2">
-              <div className="relative z-10 inline">Benefícios</div>
-              <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-1 h-1/5"></div>
+          <TextReveal>
+            <div className="text-2xl md:text-3xl font-bold text-foreground/90 mb-3">
+              <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-2">
+                <div className="relative z-10 inline">Benefícios</div>
+                <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-1 h-1/5"></div>
+              </div>
+              <span> oferecidos.</span>
             </div>
-            <span> oferecidos.</span>
+          </TextReveal>
+
+          <TextReveal>
+            <p className="text-lg max-w-2xl mx-auto">
+              Confira alguns dos diversos benefícios oferecidos para você e sua empresa
+            </p>
+          </TextReveal>
+        </div>
+
+        <TextReveal>
+          <div className='flex min-w-full justify-center mx-auto'>
+            <MagicBento
+              enableStars={true}
+              enableSpotlight={true}
+              enableBorderGlow={true}
+              enableTilt={true}
+              enableMagnetism={false}
+              clickEffect={true}
+              spotlightRadius={300}
+              particleCount={1200}
+            />
           </div>
+        </TextReveal>
 
-          <p className="text-lg max-w-2xl mx-auto">
-            Confira alguns dos diversos benefícios oferecidos para você e sua empresa
-          </p>
-        </div>
-
-        <div className='flex min-w-full justify-center mx-auto'>
-          <MagicBento
-            enableStars={true}
-            enableSpotlight={true}
-            enableBorderGlow={true}
-            enableTilt={true}
-            enableMagnetism={false}
-            clickEffect={true}
-            spotlightRadius={200}
-            particleCount={1200}
-          />
-        </div>
-
-        <div className="text-center mt-8">
-          <Link
-            href="/development-process"
-            onClick={() => window.scrollTo(0, 0)}
-            className="inline-flex items-center px-6 py-3 bg-secondary font-normal text-foreground/90 rounded-lg hover:bg-primary hover:text-background transition-all group"
-          >
-            Conheça meu processo de desenvolvimento
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </div>
+        <TextReveal>
+          <div className="text-center mt-8">
+            <Link
+              href="/development-process"
+              onClick={() => window.scrollTo(0, 0)}
+              className="inline-flex items-center px-6 py-3 bg-secondary font-normal text-foreground/90 rounded-lg hover:bg-primary hover:text-background transition-all group"
+            >
+              Conheça meu processo de desenvolvimento
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </TextReveal>
       </div>
     </section>
   )

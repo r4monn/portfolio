@@ -677,7 +677,7 @@ const MagicBento: React.FC<BentoProps> = ({
             }`;
 
             const cardStyle = {
-              backgroundColor: DEFAULT_CARD_COLOR || 'red',
+              backgroundColor: DEFAULT_CARD_COLOR,
               borderColor: 'var(--border-color)',
               color: 'var(--foreground)',
               '--glow-x': '50%',

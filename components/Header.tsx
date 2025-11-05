@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -13,13 +13,13 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ModeToggle } from "./mode-toggle";
-import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { theme, resolvedTheme } = useTheme();
+    const router = useRouter()
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -56,23 +56,21 @@ export default function Header() {
                         <NavigationMenu className="text-foreground">
                             <NavigationMenuList className="mr-6">
                                 <NavigationMenuItem>
-                                    <NavigationMenuLink href="/" className={cn(navigationMenuTriggerStyle())}>
+                                    <NavigationMenuLink onClick={async () => { router.push("/"); await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('hero') }} className={cn(navigationMenuTriggerStyle())}>
                                         Início
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <NavigationMenuLink href="/about" onClick={async () => { await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('about') }} className={cn(navigationMenuTriggerStyle())}>
+                                    <NavigationMenuLink onClick={async () => { router.push("/about"); await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('about') }} className={cn(navigationMenuTriggerStyle())}>
                                         Sobre
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>
-                                    <button onClick={async () => { /* navigate("/"); */ await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('projects') }} >
-                                        <NavigationMenuLink className={cn(navigationMenuTriggerStyle())}>
-                                            Projetos
-                                        </NavigationMenuLink>
-                                    </button>
+                                    <NavigationMenuLink onClick={async () => { router.push("/"); await new Promise((resolve) => setTimeout(resolve, 200)); scrollToSection('projects') }} className={cn(navigationMenuTriggerStyle())}>
+                                        Projetos
+                                    </NavigationMenuLink>
                                 </NavigationMenuItem>
 
                                 <NavigationMenuItem>

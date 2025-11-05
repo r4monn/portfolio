@@ -1,13 +1,22 @@
-"use client"
 import { cn } from "@/lib/utils";
 import { InteractiveGridPattern } from "./interactive-grid-pattern";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import TextType from "./TextType";
 import { techsData } from "@/data/data";
+import TextReveal from "./TextReveal";
 
 export default function Hero() {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
-        <section className="flex flex-col justify-around relative h-screen w-full py-40 px-8">
+        <section id="hero" className="flex flex-col justify-around relative h-screen w-full py-40 px-8">
             <InteractiveGridPattern
                 width={60}
                 height={60}
@@ -19,31 +28,36 @@ export default function Hero() {
             />
 
             <div className="flex flex-col relative justify-self-center self-center text-center max-w-4xl xl:mt-16">
-                <div className="text-5xl sm:text-5xl lg:text-6xl font-bold">
-                    <span className="text-foreground/80">Olá, eu sou </span>
-                    <div className="relative text-center inline px-1 mt-2 sm:mt-6">
-                        <div className="relative z-10 inline text-shadow-md">Ramon</div>
-                        <div className="absolute bottom-3 left-0 w-full bg-[#88CE02] h-3"></div>
+                <TextReveal>
+                    <div className="text-5xl sm:text-5xl lg:text-6xl font-bold">
+                        <span className="text-foreground/80">Olá, eu sou </span>
+                        <div className="relative text-center inline px-1 mt-2 sm:mt-6">
+                            <div className="relative z-10 inline text-shadow-md">Ramon</div>
+                            <div className="absolute bottom-3 left-0 w-full bg-[#88CE02] h-3"></div>
+                        </div>
+                        <span>!</span>
                     </div>
-                    <span>!</span>
-                </div>
+                </TextReveal>
 
                 <TextType
                     text={["Sofware Developer", "Web Developer", "UX/UI Designer"]}
-                    typingSpeed={75}
-                    pauseDuration={1500}
+                    typingSpeed={50}
+                    pauseDuration={2000}
+                    deletingSpeed={25}
                     showCursor={true}
                     cursorCharacter="|"
                     className="text-4xl sm:text-5xl lg:text-6xl mt-4 text-primary font-medium text-shadow-xs"
                 />
 
-                <p
-                    className="mt-4 sm:mt-6 text-lg md:text-xl"
-                >
-                    Provedor de soluções tecnológicas mais adequadas para você e sua
-                    empresa. Vamos trabalhar juntos e transformar suas ideias em
-                    realidade?
-                </p>
+                <TextReveal>
+                    <p
+                        className="mt-4 sm:mt-6 text-lg md:text-xl"
+                    >
+                        Provedor de soluções tecnológicas mais adequadas para você e sua
+                        empresa. Vamos trabalhar juntos e transformar suas ideias em
+                        realidade?
+                    </p>
+                </TextReveal>
 
                 <div
                     className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center"
@@ -51,15 +65,7 @@ export default function Hero() {
                     {/* Styled as a button but using an anchor tag for project navigation */}
                     <button
                         className="relative w-full sm:w-auto min-h-11 px-6 sm:px-8 py-3 bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium rounded-lg"
-                    /* onClick={(e) => {
-                      e.preventDefault();
-                      const projectsSection = document.getElementById("projects");
-                      if (projectsSection) {
-                        projectsSection.scrollIntoView({
-                          behavior: "smooth",
-                        });
-                      }
-                    }} */
+                        onClick={() => scrollToSection("projects")}
                     >
                         Explorar Projetos
                         <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -68,6 +74,7 @@ export default function Hero() {
                     {/* Using the Button component from shadcn but with custom styling to match the explore button */}
                     <button
                         className="relative w-full sm:w-auto min-h-11 px-6 sm:px-8 py-3 text-gray-700 bg-[#88CE02] rounded-lg hover:bg-[#bdff43] transition-all shadow-lg hover:shadow-xl hover:shadow-gray-300/20 flex items-center justify-center group text-sm sm:text-base font-medium"
+                        onClick={() => scrollToSection("contact")}
                     >
                         Entrar em Contato
                         <MessageSquare className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
@@ -76,11 +83,13 @@ export default function Hero() {
             </div>
 
             <div className="mt-20 xl:-mb-10 relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
-                <div className="text-center mt-5">
-                    <div className="inline-block mt-4 mb-6 px-3 py-1 bg-secondary text-foreground rounded-full text-sm font-light">
-                        Experiente com as Tecnologias
+                <TextReveal>
+                    <div className="text-center mt-5">
+                        <div className="inline-block mt-4 mb-6 px-3 py-1 bg-secondary text-foreground rounded-full text-sm font-light">
+                            Experiente com as Tecnologias
+                        </div>
                     </div>
-                </div>
+                </TextReveal>
 
                 <div
                     className="mt-16 md:mt-8 gap-4 md:gap-4"

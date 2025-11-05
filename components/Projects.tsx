@@ -1,11 +1,12 @@
-"use client"
 import { useIsMobile } from "@/hooks/useMobile";
 import Prism from "./Prism";
-import { useEffect, useRef, useState } from "react";
+import { TouchEvent, useEffect, useRef, useState } from "react";
 import { ArrowRight, Ban, ChevronLeft, ChevronRight } from "lucide-react";
 import { projects } from "@/data/data";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
+import TextReveal from "./TextReveal";
+import { Reveal } from "./Reveal";
 
 export default function Projects() {
     const [activeProject, setActiveProject] = useState(0);
@@ -37,12 +38,12 @@ export default function Projects() {
         return () => observer.disconnect();
     }, []);
 
-    const onTouchStart = (e: TouchEvent) => {
+    const onTouchStart = (e: TouchEvent<HTMLDivElement>) => {
         setTouchEnd(null);
         setTouchStart(e.targetTouches[0].clientX);
     };
 
-    const onTouchMove = (e: TouchEvent) => {
+    const onTouchMove = (e: TouchEvent<HTMLDivElement>) => {
         setTouchEnd(e.targetTouches[0].clientX);
     };
 
@@ -83,21 +84,27 @@ export default function Projects() {
                 >
                     <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                         <div className={`text-center mb-10 max-w-3xl mx-auto transition-all duration-1000 opacity-100 translate-y-0`}>
-                            <div className="inline-block mt-36 mb-2 px-3 py-1 bg-secondary rounded-full text-sm font-light">
-                                Projetos Recentes
-                            </div>
-
-                            <div className="text-3xl font-bold mt-4 mb-3">
-                                <span>Da Ideia à </span>
-                                <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-3">
-                                    <div className="relative z-10 inline">Implementação.</div>
-                                    <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-1 h-1/5"></div>
+                            <Reveal>
+                                <div className="inline-block mt-36 mb-2 px-3 py-1 bg-secondary rounded-full text-sm font-light">
+                                    Projetos Recentes
                                 </div>
-                            </div>
+                            </Reveal>
 
-                            <p className="">
-                                Explore abaixo uma seleção de soluções de software que desenvolvi, entregando resultados tangíveis em diversos setores. Cada projeto demonstra a aplicação de princípios de engenharia para criar sistemas eficientes e escaláveis.
-                            </p>
+                            <TextReveal>
+                                <div className="text-3xl font-bold mt-4 mb-3">
+                                    <span>Da Ideia à </span>
+                                    <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-3">
+                                        <div className="relative z-10 inline">Implementação.</div>
+                                        <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-1 h-1/5"></div>
+                                    </div>
+                                </div>
+                            </TextReveal>
+
+                            <TextReveal>
+                                <p className="">
+                                    Explore abaixo uma seleção de soluções de software que desenvolvi, entregando resultados tangíveis em diversos setores. Cada projeto demonstra a aplicação de princípios de engenharia para criar sistemas eficientes e escaláveis.
+                                </p>
+                            </TextReveal>
                             {isMobile && (
                                 <div className="flex items-center justify-center mt-4 animate-pulse-slow">
                                     <div className="flex items-center text-blue-500">
