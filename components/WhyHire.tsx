@@ -5,6 +5,7 @@ import CountUp from './CountUp';
 import MagicBento from './MagicBento';
 import Link from 'next/link';
 import TextReveal from './TextReveal';
+import { Reveal } from './Reveal';
 
 export default function WhyHire() {
   return (
@@ -114,7 +115,7 @@ export default function WhyHire() {
           </TextReveal>
         </div>
 
-        <TextReveal>
+        <Reveal>
           <div className='flex min-w-full justify-center mx-auto'>
             <MagicBento
               enableStars={true}
@@ -127,7 +128,7 @@ export default function WhyHire() {
               particleCount={1200}
             />
           </div>
-        </TextReveal>
+        </Reveal>
 
         <TextReveal>
           <div className="text-center mt-8">

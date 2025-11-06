@@ -152,3 +152,60 @@ export const projects = [
     link: ""
   }
 ];
+
+export const education = [
+  {
+    title: "Bacharelado em Engenharia de Software",
+    details: "Integral • EaD • USA",
+    period: "Jan 2024 - Cursando",
+    company: "Jala University",
+    logo: "https://jala.university/wp-content/uploads/2023/07/cropped-Favicon-jala-u-32x32.png",
+    description:
+      "Coursework: Software Engineering, Algorithms and Data Structures, Database Systems, Web and Mobile Development",
+  },
+  {
+    title: "Web3 / Solidity",
+    details: "Flexível • Online",
+    period: "Set 2025 - Atualmente",
+    company: "Cyfrin Updraft",
+    logo: "https://updraft.cyfrin.io/favicon.svg",
+    description:
+      "Coursework: Blockchain developer fundamentals, Smart Contracts, Ethereum, Solidity, Transactions, ZK Proof.",
+  },
+  {
+    title: "Amazon Junior Software Developer",
+    details: "Flexível • Online",
+    period: "Fev 2025 - Atualmente",
+    company: "Coursera",
+    logo: "https://www.amazon.com.br/favicon.ico",
+    description:
+      "Coursework: Software Development, Algorithms and Data Structures, Java.",
+  },
+  {
+    title: "Ignite ReactJS",
+    details: "Flexível • Online",
+    period: "Set 2022 - Set 2023",
+    company: "Rocketseat",
+    logo: "https://app.rocketseat.com.br/assets/logos/rocketseat-icon.svg",
+    description:
+      "Coursework: Web Development, Design Patterns, React, Typescript, Next.js, Stitches, Styled Components, Tailwindcss, axios, zod.",
+  },
+  {
+    title: "Desenvolvimento FrontEnd",
+    details: "Noturno • Online",
+    period: "Mar 2022 - Set 2022",
+    company: "Tech4Me",
+    logo: "https://www.tech4me.com.br/img/favicon_tech4me.png",
+    description:
+      "Coursework: Web Development, HTML, CSS, Javascript, React.",
+  },
+  {
+    title: "Assistente Administrativo",
+    details: "Meio período • Presencial • Rio de Janeiro",
+    period: "Jan 2022 - Dez 2022",
+    company: "SENAI Maracanã",
+    logo: "https://firjan.com.br/data/files/63/87/D9/E1/AD4B59109D34F849D8284EA8/favicon.ico",
+    description:
+      "Implementação de controles de qualidade; Gestão e organização de documentos corporativos; Compra de material de escritório e gestão de estoque; Desenvolvimento de planilhas e relatórios empresariais.",
+  },
+]
