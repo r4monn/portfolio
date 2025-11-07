@@ -85,7 +85,7 @@ export default function Projects() {
                     <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
                         <div className={`text-center mb-10 max-w-3xl mx-auto transition-all duration-1000 opacity-100 translate-y-0`}>
                             <Reveal>
-                                <div className="inline-block mt-36 mb-2 px-3 py-1 bg-secondary rounded-full text-sm font-light">
+                                <div className="inline-block mt-12 md:mt-36 mb-2 px-3 py-1 bg-secondary rounded-full text-sm font-light">
                                     Projetos Recentes
                                 </div>
                             </Reveal>
@@ -149,7 +149,7 @@ export default function Projects() {
                                                 </div>
                                             </div>
 
-                                            <CardContent className="p-6 flex flex-col grow">
+                                            <CardContent className="sm:px-6 md:p-6 flex flex-col grow">
                                                 <div className="mb-4">
                                                     <h3 className="text-xl font-bold mb-1 group-hover:text-gray-500 transition-colors">
                                                         {project.title}

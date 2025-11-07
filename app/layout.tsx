@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Krub } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const KrubSans = Krub({
   variable: "--font-krub-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
         >
             <Header />
             {children}
+            <Footer />
         </ThemeProvider>
       </body>
     </html>
