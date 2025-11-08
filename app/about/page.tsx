@@ -1,21 +1,15 @@
 "use client"
-
 import { ArrowLeft } from 'lucide-react';
 import { motion } from "framer-motion";
-import { useEffect } from 'react';
 import { education } from '@/data/data';
 import Link from 'next/link';
 import { AnimatedItem } from '@/components/AnimatedList';
 import { Badge } from '@/components/ui/badge';
 
 export default function About() {
-    // Scroll to top on mount
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
-        <section id='about' className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <section id='about' className="pt-24 px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto">
                 <div className="max-w-6xl mx-auto">
                     <Link href="/" className="inline-flex items-center hover:text-primary mb-6 transition-colors">
