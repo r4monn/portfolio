@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ContactInfo from "@/components/ContactInfo";
 
 const KrubSans = Krub({
   variable: "--font-krub-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
         >
             <Header />
             {children}
+            <ContactInfo />
             <Footer />
         </ThemeProvider>
       </body>
