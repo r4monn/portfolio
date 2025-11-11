@@ -16,6 +16,7 @@ import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { useRouter } from "next/navigation";
+import CustomMobileMenu from "./CustomMobileMenu";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,6 +36,36 @@ export default function Header() {
         setIsMenuOpen(false);
     };
 
+    const menuItems = [
+        { label: "Início", ariaLabel: "Ir para a seção inicial", link: "#hero" },
+        {
+            label: "Sobre",
+            ariaLabel: "Ir para a seção sobre",
+            link: "/about"
+        },
+        {
+            label: "Projetos",
+            ariaLabel: "Ir para a seção de projetos",
+            link: "#projects"
+        },
+        {
+            label: "Processo",
+            ariaLabel: "Conhecer o processo de desenvolvimento",
+            link: "/development-process"
+        },
+        {
+            label: "Contate-me",
+            ariaLabel: "Entrar em contato",
+            link: "#contact"
+        }
+    ];
+
+    const socialItems = [
+        { label: 'Instagram', link: 'https://www.instagram.com/ramondiiaas/' },
+        { label: 'GitHub', link: 'https://github.com/r4monn' },
+        { label: 'LinkedIn', link: 'https://www.linkedin.com/in/ramon-diiaas/' }
+    ];
+    
     return (
         <motion.nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full bg-background")} initial={{
             opacity: 1,
@@ -109,12 +140,16 @@ export default function Header() {
                         </NavigationMenu>
                     </div>
 
-                    {/* Mobile menu button */}
-                    <div className="md:hidden">
-                        <button onClick={toggleMenu} className={cn("focus:outline-none text-foreground")}>
-                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
-                    </div>
+                    <CustomMobileMenu
+                        position="right"
+                        items={menuItems}
+                        socialItems={socialItems}
+                        displaySocials={true}
+                        displayItemNumbering={true}
+                        changeMenuColorOnOpen={true}
+                        logoUrl="/logo.svg"
+                        isFixed={true}
+                    />
                 </div>
             </div>
         </motion.nav>
