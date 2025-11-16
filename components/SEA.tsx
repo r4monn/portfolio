@@ -72,7 +72,7 @@ export default function SEA() {
                             "relative transition-all duration-500",
                             isHijacked && isInView
                                 ? "fixed inset-0 z-50 bg-black"
-                                : "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5"
+                                : "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-4 mb-8"
                         )}
                         style={{ height: isHijacked && isInView ? "100vh" : "auto" }}
                     >
@@ -96,7 +96,7 @@ export default function SEA() {
                                                     ? "opacity-0 -translate-x-full"
                                                     : "opacity-0 translate-x-full"
                                         )
-                                        : "hover:-translate-y-3 h-[260px] sm:h-[220px] md:h-[260px] lg:h-60 xl:h-60"
+                                        : "hover:-translate-y-3 h-[290px] md:h-[260px] lg:h-60 xl:h-60"
                                 )}
                                 style={{
                                     transitionDelay: isHijacked ? "0ms" : `${index * 100}ms`,
@@ -149,7 +149,7 @@ export default function SEA() {
                                         "relative z-10 flex flex-col justify-center",
                                         isHijacked
                                             ? "p-16 h-full text-center items-center"
-                                            : "p-6 h-full justify-between"
+                                            : "p-4 h-full justify-between"
                                     )}
                                 >
                                     <div className={isHijacked ? "space-y-8" : ""}>

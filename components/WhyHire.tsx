@@ -16,7 +16,7 @@ export default function WhyHire() {
             <span>Por que me </span>
             <div className="relative text-center inline px-1 mt-2 sm:mt-6 mb-2">
               <div className="relative z-10 inline">Contratar</div>
-              <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-2 h-3"></div>
+              <div className="absolute bottom-0 left-0 w-full bg-[#88CE02] mb-1 h-2 md:mb-2 md:h-3"></div>
             </div>
             <span>?</span>
           </div>
@@ -39,7 +39,7 @@ export default function WhyHire() {
               +
               <CountUp
                 from={0}
-                to={3}
+                to={4}
                 direction="up"
                 duration={1}
                 className="count-up-text"

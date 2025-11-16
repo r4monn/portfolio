@@ -29,8 +29,8 @@ export default function Hero() {
 
             <div className="flex flex-col relative justify-self-center self-center text-center max-w-4xl xl:mt-16">
                 <TextReveal>
-                    <div className="text-5xl sm:text-5xl lg:text-6xl font-bold">
-                        <span className="text-foreground/80">Olá, eu sou </span>
+                    <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground/90">
+                        <span>Olá, eu sou </span>
                         <div className="relative text-center inline px-1 mt-2 sm:mt-6">
                             <div className="relative z-10 inline text-shadow-md">Ramon</div>
                             <div className="absolute bottom-3 left-0 w-full bg-[#88CE02] h-3"></div>
@@ -46,12 +46,12 @@ export default function Hero() {
                     deletingSpeed={25}
                     showCursor={true}
                     cursorCharacter="|"
-                    className="text-4xl sm:text-5xl lg:text-6xl mt-4 text-primary font-medium text-shadow-xs"
+                    className="text-3xl sm:text-5xl lg:text-6xl mt-4 text-primary font-medium text-shadow-xs"
                 />
 
                 <TextReveal>
                     <p
-                        className="mt-4 sm:mt-6 text-lg md:text-xl"
+                        className="mt-4 sm:mt-6 text-md md:text-xl"
                     >
                         Provedor de soluções tecnológicas mais adequadas para você e sua
                         empresa. Vamos trabalhar juntos e transformar suas ideias em
@@ -82,7 +82,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className="mt-20 xl:-mb-10 relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
+            <div className="mt-4 lg:mt-0 xl:mt-20 xl:-mb-10 relative z-10 w-full px-4 sm:px-6 lg:px-8 mx-auto">
                 <TextReveal>
                     <div className="text-center mt-5">
                         <div className="inline-block mt-4 mb-6 px-3 py-1 bg-secondary text-foreground rounded-full text-sm font-light">
@@ -92,7 +92,7 @@ export default function Hero() {
                 </TextReveal>
 
                 <div
-                    className="mt-16 md:mt-8 gap-4 md:gap-4"
+                    className="md:mt-8 gap-4 md:gap-4"
                 >
                     <div className="w-full inline-flex flex-nowrap overflow-hidden mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-200px),transparent_100%)]">
                         <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll text-6xl">

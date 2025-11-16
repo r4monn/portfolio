@@ -132,7 +132,7 @@ export default function Projects() {
                                         className={`absolute top-0 w-full max-w-md transform transition-all duration-500 ${getCardAnimationClass(index)}`}
                                         style={{ transitionDelay: `${index * 50}ms` }}
                                     >
-                                        <Card className="overflow-hidden h-[500px] border-b-2 border-b-[#88CE02] shadow-lg hover:shadow-xl flex flex-col">
+                                        <Card className="overflow-hidden h-[500px] dark:border-[#132015] border-b-2 border-b-[#88CE02] shadow-lg hover:shadow-xl flex flex-col">
                                             <div
                                                 className="relative bg-black p-6 flex items-center justify-center h-48 overflow-hidden"
                                                 style={{
